@@ -34,7 +34,8 @@ export const login = async (email, password) => {
     // console.log(res, data);
   } catch (err) {
     // console.log(err.response.data);
-    console.log(err);
+    // console.log(err);
+    showAlert("error", err.response.data.message);
     // console.log(err.response.data);
     // alert("error", err.response.data.message);
   }
@@ -46,7 +47,7 @@ export const logout = async () => {
       method: "GET",
       url: "/api/v1/users/logout",
     });
-    console.log(res);
+    // console.log(res);
     if (res.data.status === "success") {
       // alert("Logged in Successfully");
       // console.log("Hii from logout");

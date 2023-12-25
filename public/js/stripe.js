@@ -10,12 +10,12 @@ export const bookTour = async (tourId) => {
     // console.log(session);
 
     // 2) Create checkout form + change Credit Card
-    window.location.href = session.data.session.url;
+    if (session) window.location.href = session.data.session.url;
     // await stripe.redirectToCheckout({
     //   sessionId: session.data.session.id,
     // });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     showAlert("error", err);
   }
 };

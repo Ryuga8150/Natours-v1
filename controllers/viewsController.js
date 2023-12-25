@@ -6,7 +6,7 @@ const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
 
 exports.getOverview = catchAsync(async (req, res) => {
-  console.log("get overview reached");
+  // console.log("get overview reached");
   // 1) Get tour from collection
   const tours = await Tour.find();
 
@@ -76,7 +76,7 @@ exports.getMyTours = catchAsync(async (req, res, next) => {
 });
 
 exports.updateUserData = async (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,
