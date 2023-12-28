@@ -43,7 +43,7 @@ exports.signup = catchAsync(async (req, res, next) => {
   // const newUser=await User.create(req.body);
 
   // do like this as anyone can register itself as a user
-  console.log(req.body);
+  // console.log(req.body);
   const newUser = await User.create({
     name: req.body.name,
     email: req.body.email,
@@ -53,7 +53,7 @@ exports.signup = catchAsync(async (req, res, next) => {
   });
 
   const url = `${req.protocol}://${req.get("host")}/me`;
-  console.log(url);
+  // console.log(url);
   await new Email(newUser, url).sendWelcome();
 
   createSendToken(newUser, 201, res);
@@ -94,7 +94,7 @@ exports.logout = (req, res) => {
 };
 
 exports.protect = catchAsync(async (req, res, next) => {
-  console.log("Inside Protect");
+  // console.log("Inside Protect");
   // 1) Getting token and check if it's there
   let token;
   if (

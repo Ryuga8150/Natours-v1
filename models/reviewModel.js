@@ -67,7 +67,7 @@ reviewSchema.statics.calcAverageRatings = async function (tourId) {
     },
   ]);
 
-  console.log(stats);
+  // console.log(stats);
   if (stats.length > 0) {
     await Tour.findByIdAndUpdate(tourId, {
       ratingsQuantity: stats[0].nRating,
@@ -98,7 +98,7 @@ reviewSchema.post("save", function () {
 reviewSchema.pre(/^findOneAnd/, async function (next) {
   // idea is will excute query to get document
   this.r = await this.findOne();
-  console.log(this.r);
+  // console.log(this.r);
   next();
 });
 

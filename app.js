@@ -8,11 +8,13 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 const compression = require("compression");
+const cors = require("cors");
 
 const tourRouter = require("./routes/tourRoutes");
 const userRouter = require("./routes/userRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const bookingRouter = require("./routes/bookingRoutes");
+const bookingController = require("./controllers/bookingController");
 const viewRouter = require("./routes/viewRoutes");
 const globalErrorHandler = require("./controllers/errorController");
 
@@ -29,6 +31,16 @@ app.set("views", path.join(__dirname, "views")); // need from root module
 app.use(express.static(path.join(__dirname, "public")));
 
 // 1) GLOBAL MIDDLEWARES
+// Implement CORS
+app.use(cors());
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin:'https://www.natours.com'
+// }))
+
+app.options("*", cors());
+// app.options("/api/v1/tours/:id", cors());
 
 // Security HTTP headers
 app.use(helmet());
@@ -43,6 +55,12 @@ const limiter = rateLimit({
 });
 
 app.use("/api", limiter);
+
+app.post(
+  "/webhook-checkout",
+  express.json({ type: "application/json" }),
+  bookingController.webhookCheckout
+);
 
 // Data sanitization against NOSQL query injection
 
