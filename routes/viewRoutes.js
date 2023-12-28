@@ -18,6 +18,8 @@ const bookingController = require("../controllers/bookingController");
 // for /me we had protect which offers same functionality as isLoggedin
 // so to avoid that added the isloggedin middleware where it was required
 
+router.use(viewsController.alerts);
+
 router.get(
   "/",
   // bookingController.createBookingCheckout,

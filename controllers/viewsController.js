@@ -5,6 +5,16 @@ const Booking = require("./../models/bookingModel");
 const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
 
+exports.alerts = (req, res, next) => {
+  const { alert } = req.query;
+
+  // since webhook could be created after success url
+  //  so might need some waiting
+  if (alert === "booking")
+    res.locals.user = `Your booking was successful! Please check your email for confirmation. If your booking doesn't show up here immediately, please come back later.`;
+  next();
+};
+
 exports.getOverview = catchAsync(async (req, res) => {
   // console.log("get overview reached");
   // 1) Get tour from collection
