@@ -19,8 +19,11 @@ const viewRouter = require("./routes/viewRoutes");
 const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
-
-app.set("trust proxy", `${req.hostname}`);
+// let hostname = "127.0.0.1";
+// if (process.env.NODE_ENV === "production") {
+//   hostname = "natours-ryuga.onrender.com";
+// }
+app.set("trust proxy", true);
 app.set("view engine", "pug");
 // console.log(__dirname);
 
