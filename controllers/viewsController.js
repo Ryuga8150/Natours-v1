@@ -11,7 +11,7 @@ exports.alerts = (req, res, next) => {
   // since webhook could be created after success url
   //  so might need some waiting
   if (alert === "booking")
-    res.locals.user = `Your booking was successful! Please check your email for confirmation. If your booking doesn't show up here immediately, please come back later.`;
+    res.locals.alert = `Your booking was successful! Please check your email for confirmation. If your booking doesn't show up here immediately, please come back later.`;
   next();
 };
 
