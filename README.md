@@ -137,24 +137,12 @@ Get Tours Within Radius 👉🏻 https://natours-ryuga.onrender.com/api/v1/tours
 
 ## Deployment 🌍
 
-The website is deployed with git into Heroku. Below are the steps taken:
+The website is deployed on Render. Below are the commands for setup at render:
 
 ```
-git init
-git add -A
-git commit -m "Commit message"
-heroku login
-heroku create
-heroku config:set CONFIG_KEY=CONFIG_VALUE
-parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js
-git push heroku master
-heroku open
-```
+build command: npm i
 
-You can also change your website URL by running this command:
-
-```
-heroku apps: rename natours-users
+start command: npm run start
 ```
 
 ## Build With 🏗️
@@ -265,4 +253,4 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-ryuga.onrender.com/
 
 ## Acknowledgement 🙏🏻
 
-- This project is part of the online course I've taken at Udemy. Thanks to Jonas Schmedtmann for creating this awesome course! Link to the course: [Node.js, Express, MongoDB & More: The Complete Bootcamp 2019](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
+- This project is part of the online course at Udemy. Thanks to Jonas Schmedtmann for creating this awesome course! Link to the course: [Node.js, Express, MongoDB & More: The Complete Bootcamp 2019](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
