@@ -89,10 +89,15 @@
 ### Book a tour
 
 - Login to the site
+- Test Login (Valid user in site):
+  ```
+  - email: leo@example.com
+  - password: test1234
+  ```
 - Search for tours that you want to book
 - Book a tour
 - Proceed to the payment checkout page
-- Enter the card details (Test Mood):
+- Enter the card details (Test Mode):
   ```
   - Card No. : 4242 4242 4242 4242
   - Expiry date: 02 / 22
@@ -118,17 +123,17 @@ Before using the API, you need to set the variables in Postman depending on your
 - {{password}} with your user password as value.
 ```
 
-Check [Natours API Documentation](https://documenter.getpostman.com/view/8893042/SW7c37V6) for more info.
+Check [Natours API Documentation](https://documenter.getpostman.com/view/26796376/2s93eSaFkk) for more info.
 
 <b> API Features: </b>
 
-Tours List 👉🏻 https://lgope-natours.onrender.com/api/v1/tours
+Tours List 👉🏻 https://natours-ryuga.onrender.com/api/v1/tours
 
-Tours State 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tour-stats
+Tours State 👉🏻 https://natours-ryuga.onrender.com/api/v1/tours/tour-stats
 
-Get Top 5 Cheap Tours 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/top-5-cheap
+Get Top 5 Cheap Tours 👉🏻 https://natours-ryuga.onrender.com/api/v1/tours/top-5-cheap
 
-Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
+Get Tours Within Radius 👉🏻 https://natours-ryuga.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 ## Deployment 🌍
 
@@ -239,7 +244,7 @@ Pull requests are welcome but please open an issue and discuss what you will do 
 
 ## Known Bugs 🚨
 
-Feel free to email me at lakshman.gope2@gmail.com if you run into any issues or have questions, ideas or concerns.
+Feel free to email me at ryuga13.1.4@gmail.com if you run into any issues or have questions, ideas or concerns.
 Please enjoy and feel free to share your opinion, constructive criticism, or comments about my work. Thank you! 🙂
 
 ## Future Updates 🪴
